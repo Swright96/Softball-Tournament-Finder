@@ -59,7 +59,6 @@ const UpdateTournament = () => {
 			})
 			.catch((err) => {
 				console.log(err)
-				console.log(err.res.data)
 				const errorResponse = err.response.data.err.errors
 				console.log(errorResponse)
 				const errorArr = []
@@ -88,7 +87,7 @@ const UpdateTournament = () => {
 				</h1>
 			</div>
 			<div className="container">
-				<h4>Have a tournament coming up?</h4>
+				<h4>Update your tournament information</h4>
 				<p>
 					Posting to our database allows your tournament to gain more
 					exposure with our users!
@@ -103,6 +102,10 @@ const UpdateTournament = () => {
 						<div className="formLeft">
 							<div className="">
 								<label>City</label>
+								{errors.city ? (
+									<p>{errors.city.message}</p>
+								) : null}
+
 								<p>
 									<input
 										type="text"

@@ -36,24 +36,33 @@ const ViewTournament = (props) => {
 				<h1>
 					Tournament in {tournament.city}, {tournament.state}
 				</h1>
-				<p>Date: {tournament.date}</p>
-				<p>Located at {tournament.specificPark}</p>
-				<p>
-					Description: <br />
-					{tournament.description}
-				</p>
-				<p>Ruleset: {tournament.tournamentRuleset}</p>
-				<p>Bracket Style: {tournament.bracketType}</p>
-				<p>Max Teams: {tournament.maxNumberOfTeams}</p>
-				<p>Prize: {tournament.prize}</p>
-				<p>Registration Fee: {tournament.entryCost}</p>
-				<a href="/">
-					<button
-						style={{ color: "black", backgroundColor: "white" }}
-					>
-						Home
-					</button>
-				</a>
+				<div className="detailsContainer">
+					<div className="detailsLeft">
+						<p>Date: {tournament.date}</p>
+						<p>Located at {tournament.specificPark}</p>
+						<p>
+							Description: <br />
+							{tournament.description}
+						</p>
+					</div>
+					<div className="detailsRight">
+						<p>Ruleset: {tournament.tournamentRuleset}</p>
+						<p>Bracket Style: {tournament.bracketType}</p>
+						<p>Max Teams: {tournament.maxNumberOfTeams}</p>
+						<p>Prize: {tournament.prize}</p>
+						<p>Registration Fee: {tournament.entryCost}</p>
+						<a href="/">
+							<button
+								style={{
+									color: "black",
+									backgroundColor: "white",
+								}}
+							>
+								Home
+							</button>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	)
